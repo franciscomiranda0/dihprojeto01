@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--clr-first);
+    display: flex;
+    flex: 1 1 auto;
+    height: 200px;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--clr-second);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 72pt;
+    height: inherit;
+    margin: 0;
+    text-align: center;
+    text-shadow: 5px 5px 1px var(--clr-third);
+    width: 100%;
+}
+
+article {
+    height: 100vh;
+}
+
+.header {
+    background-color: var(--clr-second);
+    height: 80px;
+    width: 100%;
+}
+
+form {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    height: inherit;
+    margin-left: 10%;
+    width: 80%;
+}
+
+.input__label {
+    color: var(--clr-first);
+    font-size: 18pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 1px 1px 1px var(--clr-third);
+}
+
+input {
+    background-color: var(--clr-third);
+    border: .5px solid var(--clr-first);
+    border-radius: 10px;
+    box-shadow: 1.5px -1.5px 3px inset var(--clr-first);
+    flex-grow: 1;
+    height: 20pt;
+    margin-left: 10px;
+}
+
+.list {
+    background-color: var(--clr-third);
+    /* border-radius: 8px; */
+    margin-left: 10%;
+    height: 520px;
+    overflow-y: scroll;
+    width: 80%;
+}
+
+table {
+    display: flex;
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+tbody {
+    width: 100%;
+}
+
+tr {
+    height: 50px;
+}
+
+td {
+    padding: 0px 5px;
+    /* text-align: center; */
+}
+
+/* 
+.table__head {
+    position: sticky;
+    top: 0px;
+} */
+
+.table__small {
+    text-align: center;
+    width: 5%;
+}
+
+.table__medium {
+    width: 20%;
+}
+
+.table__large {
+    width: 60%;
+}
+
+label {
+    cursor: pointer;
+}
+
+.btn__base {
+    cursor: pointer;
+    display: flex;
+    border-radius: 50%;
+    height: 30px;
+    justify-content: center;
+    width: 30px;
+}
+
+.btn__option {
+    background-color: var(--clr-first);
+    border: 1px solid var(--clr-first);
+    box-shadow: 2.5px 2.5px 2px var(--clr-second);
+    color: var(--clr-second);
+    font-size: 14pt;
+}
+
+.btn__end {
+    background-color: var(--clr-first);
+    border: 1px solid var(--clr-first);
+    border-radius: 0;
+    color: var(--clr-second);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 12pt;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-left: 10%;
+    min-height: 32px;
+    text-shadow: .5px .5px 1px var(--clr-third);
+    width: 80%;
+}
+
+.form__btn {
+    background-color: var(--clr-first);
+    border: 1px solid var(--clr-first);
+    box-shadow: 2.5px 2.5px 2px var(--clr-third);
+    color: var(--clr-second);
+    font-size: 17pt;
+    margin-left: 5px;
+}
+
+/* The container */
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14pt;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.container input:checked~.checkmark {
+    background-color: var(--clr-first);
+}
+
+.container div {
+    color: var(--clr-warn);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 13pt;
+}
+
+.container input:checked~div {
+    color: var(--clr-success);
+}
+
+.container input:checked #line {
+    text-decoration: line-through;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@media screen and (max-width: 600px) {
+    .list {
+        margin: 0px;
+        max-height: 380px;
+        width: 100%;
+    }
+    .btn__end {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1280px) {}
+
+@media screen and (max-width: 1600px) {}
+
+@media screen and (max-width: 1920px) {}

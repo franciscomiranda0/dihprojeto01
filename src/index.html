@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="shortcut icon" href="assets/TODO.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <script type="text/javascript" src="js/index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>// TODO</h1>
+    </header>
+
+    <main>
+        <article>
+            <section class="header">
+                <form onsubmit="submitForm(event)">
+                    <label class="input__label" for="descriptionInput">
+                        NOVO:
+                    </label>
+                    <input type="text" id="descriptionInput" placeholder="Nova atividade">
+                    <button class="btn__base form__btn" type="submit">
+                        +
+                    </button>
+                </form>
+            </section>
+            <section class="list">
+                <table id="table">
+                    <tbody></tbody>
+                </table>
+            </section>
+            <button class="btn__end" onclick="clearStorage()">LIMPAR LISTA</button>
+        </article>
+    </main>
+</body>
+
+</html>
