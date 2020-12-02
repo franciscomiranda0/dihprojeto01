@@ -23,7 +23,17 @@ const deleteListItem = (itemId) => {
     buildTable()
 }
 
-const getNewItemId = () => (Math.random() * (10000 - 1000) + 1000).toFixed().toString()
+function getNewItemId() {
+    let newId
+    do {
+        newId = (Math.random() * (10000 - 1000) + 1000).toFixed().toString()
+    } while (!isNewIdAvailable(newId))
+    return newId
+}
+
+const isNewIdAvailable = (newId) => {
+    return localStorage.getItem(newId) == null
+}
 
 const getTableHead = () =>
     `<tr class="table__head">

@@ -98,10 +98,12 @@ td {
 }
 
 .table__medium {
+    text-align: start;
     width: 20%;
 }
 
 .table__large {
+    text-align: start;
     width: 60%;
 }
 
