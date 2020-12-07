@@ -48,8 +48,7 @@ const getTableRow = (listItem, index) => {
     const element = document.createElement('tr')
     const item = JSON.parse(listItem)
     element.innerHTML =
-        `<tr>
-            <td class="table__small">${++index}</td>
+        `<td class="table__small">${++index}</td>
             <td class="table__small">${item.itemId}</td>
             <td>
             <label class="container">
@@ -76,8 +75,7 @@ const getTableRow = (listItem, index) => {
                 <button class="btn__base btn__option" value="${item.itemId}" onclick="deleteListItem(value)" >
                     &#9851;
                 </button>
-            </td>
-        </tr>`
+        </td>`
     return element
 }
 
